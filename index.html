@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan1</title>
+  <link rel="stylesheet" href="bootstrap/faik/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border">
+      <div class="container">
+        <a class="navbar-brand" href="#"><i class="fa fa-home"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">admis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Mahasiswa</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <b>
+      Data Mahasiswa
+    </b>
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table">
+          <tr>
+            <td>NPM</td>
+            <td><b>22.01.53.0048</b></td>
+          </tr>
+          <tr>
+            <td>Nama</td>
+            <td><b>AHMAD FAIQ WICAKSONO</b></td>
+          </tr>
+          <tr>
+            <td>program</td>
+            <td>REG-<b>REGULER</b></td>
+          </tr>
+          <tr>
+            <td>program studi</td>
+            <td>12-<b>teknik informatika</b></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <img src="ppfaiq.jpeg" style="width: 125px;">
+      </div>
+    </div>
+    <div class="flex">
+      <button class="btn btn-primary">Pribadi</button>
+      <button class="btn btn-primary">Alamat Tetap</button>
+      <button class="btn btn-primary">Orang Tua</button>
+      <button class="btn btn-primary">Asal Sekolah</button>
+    </div>
+    <h5>
+      <b>Silahkan lengkapi semua isian data diri.</b>pastikan data sesuai dengan KTP/ijazah atau identitas resmi lain
+    </h5>
+
+    <!-- Form -->
+    <form action="proses_data.php" method="post" enctype="multipart/form-data">
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-1" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="input-1" placeholder="Nama Lengkap Anda" required />
+      </div>
+
+      <div class="form-group mb-3 w-100" id="form">
+        <label for="input-2" class="form-label">Tempat Lahir</label>
+        <input type="text" class="form-control" id="input-2" placeholder="Tempat Lahir Anda" required />
+      </div>
+
+      <div class="form-group mb-3 w-100" id="form">
+        <label for="radio-box2" class="form-label">Warga Negara</label>
+        <input class="form-check-input" type="radio" name="radio-box" id="radio-box2" checked />
+        <label class="form-check-label" for="radio-box2">Warga Negara Indonesia</label>
+        &nbsp; &nbsp; &nbsp;
+        <br />
+        <input class="form-check-input" type="radio" name="radio-box" id="radio-box3" checked />
+        <label class="form-check-label" for="radio-box3">Warga Negara Asing</label>
+      </div>
+
+      <div class="form-group mb-3 w-100" id="form">
+        <label for="hei" class="form-label">Negara</label>
+        <select class="form-select" aria-label="Pilih Negara Anda" required>
+          <option selected>Pilih Negara Anda</option>
+          <option value="1">Indonesia</option>
+          <option value="2">India</option>
+          <option value="3">Arab</option>
+          <option value="4">England</option>
+        </select>
+      </div>
+
+      <div class="form-group mb-4 w-75" id="form">
+        <label for="input-4" class="form-label">Nama Ibu</label>
+        <input type="text" class="form-control" id="input-4" placeholder="Nama Ibu Anda" />
+      </div>
+
+      <div class="form-group mb-4 w-75" id="form">
+        <label for="input-5" class="form-label">Nama Ayah</label>
+        <input type="text" class="form-control" id="input-5" placeholder="Nama Ayah Anda" />
+      </div>
+
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-6" class="form-label">No KTP Mahasiswa</label>
+        <input type="text" class="form-control" id="input-6" placeholder="Nomer KTP Anda" required />
+      </div>
+
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-7" class="form-label">NISN</label>
+        <input type="text" class="form-control" id="input-7" placeholder="NISN Anda" required />
+      </div>
+
+      <div class="form-group mb-4 w-75" id="form">
+        <label for="input-8" class="form-label">Jenis Kelamin</label>
+        <select class="form-select" id="input-8" aria-label="Jenis Kelamin Anda" required>
+          <option selected></option>
+          <option value="1">Laki-Laki</option>
+          <option value="2">Wanita</option>
+        </select>
+      </div>
+
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-9" class="form-label">Agama</label>
+        <select class="form-select" id="input-9" aria-label="Agama Anda" required>
+          <option selected></option>
+          <option value="Islam">Islam</option>
+          <option value="Kristen">Kristen</option>
+          <option value="Hindu">Hindu</option>
+          <option value="Buddha">Buddha</option>
+          <option value="Konghucu">Konghucu</option>
+        </select>
+        &nbsp; &nbsp;
+        <label for="input-10" class="form-label">Gol.Darah</label>
+        <select class="form-select" id="input-10" aria-label="Golongan Darah" required>
+          <option selected></option>
+          <option value="1">AB</option>
+          <option value="2">A</option>
+          <option value="3">B</option>
+          <option value="4">O</option>
+        </select>
+      </div>
+
+      <div class="form-group mb-4 w-75" id="form">
+        <label for="input-11" class="form-label">Status Sipil</label>
+        <select class="form-select" id="input-11" aria-label="Status Sipil" required>
+          <option selected></option>
+          <option value="1">Menikah</option>
+          <option value="2">Belum Menikah</option>
+        </select>
+      </div>
+
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-12" class="form-label">Alamat</label>
+        <input type="text" class="form-control" id="input-12" placeholder="Alamat Lengkap Anda" required />
+      </div>
+
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-13" class="form-label">RT</label>
+        <input type="text" class="form-control" id="input-13" placeholder="RT" required />
+        &nbsp; &nbsp;
+        <label for="input-14" class="form-label">RW</label>
+        <input type="text" class="form-control" id="input-15" placeholder="RW" required />
+      </div>
+
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-15" class="form-label">Kota/Kabupaten</label>
+        <input type="text" class="form-control" id="input-15" placeholder="Kota/Kabupaten" required />
+      </div>
+
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-16" class="form-label">Kode Pos</label>
+        <input type="text" class="form-control" id="input-16" placeholder="Kode Pos" required />
+      </div>
+
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-17" class="form-label">Kelurahan</label>
+        <input type="text" class="form-control" id="input-17" placeholder="Kelurahan Anda" required />
+      </div>
+
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-18" class="form-label">Kecamatan</label>
+        <input type="text" class="form-control" id="input-18" placeholder="Kecamatan Anda" required />
+      </div>
+
+      <div class="form-group mb-4 w-75" id="form">
+        <label for="input-19" class="form-label">No Telepon/No HP</label>
+        <input type="text" class="form-control" id="input-19" placeholder="Nomer Anda" required />
+      </div>
+
+      <div class="form-group mb-4 w-100" id="form">
+        <label for="input-20" class="form-label">Alamat Email</label>
+        <input type="text" class="form-control" id="input-20" placeholder="Email Anda" required />
+      </div>
+
+      <div class="form-group mb-4 w-100">
+        <label for="formFile" class="form-label">Foto <br />(Menggunakan Jas Almet)
+        </label>
+        <input class="form-control" type="file" id="formFile" required />
+      </div>
+
+      <div class="form-group mb-4 w-100">
+        <label for="formFile-2" class="form-label">Foto Calon Wisudawan</label>
+        <input class="form-control" type="file" id="formFile-2" />
+      </div>
+
+      <div class="form-group mb-4 w-100">
+        <label for="formFile-3" class="form-label">Scan KTP / KK</label>
+        <input class="form-control" type="file" id="formFile-3" required />
+      </div>
+
+      <div class="form-group mb-4 w-100">
+        <label for="formFile-4" class="form-label">Scan Ijazah SMA</label>
+        <input class="form-control" type="file" id="formFile-4" required />
+      </div>
+
+      <div class="form-group mb-4 w-100">
+        <label for="formFile-5" class="form-label">Scan Ijazah Akhir</label>
+        <input class="form-control" type="file" id="formFile-5" />
+      </div>
+
+      <div class="form-group mb-4 w-100">
+        <label for="formFile-6" class="form-label">Scan Transkrip Akhir</label>
+        <input class="form-control" type="file" id="formFile-6" />
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary ms-5">Submit</button>
+        <button type="reset" class="btn btn-secondary ms-5">Reset</button>
+      </div>
+    </form>
+
+    <!-- Form End -->
+
+
+
+</body>
+<link rel="stylesheet" href="bootstrap/faik/js/bootstrap.bundle.min.js">
+
+</html>
